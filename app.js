@@ -4,8 +4,9 @@ var app = express();
 var port = 4000;
 
 app.get("/",(req,res)=>{
-    var random = Math.floor(Math. random() * 6) + 1
-    res.send(quotes[random])
+    var date = new Date()
+    var day = date.getDay();
+    res.send(quotes[day])
 })
 
 var httpServer = app.listen(port,()=>{
