@@ -9,7 +9,7 @@ app.get("/",(req,res)=>{
     res.send(quotes[day])
 })
 
-var httpServer = app.listen(port,()=>{
+var httpServer = app.listen(process.env.PORT || port,()=>{
     console.log("listenning at port "+port);
 })
 
